@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            color:rgb(135, 137, 138);
+            background-color: black;
+        }
+        .block{
+    color:rgb(135, 137, 138);
+    background-color: rgb(39, 37, 37);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding:5px;
+    margin-left:10px;
+    margin-right:10px;
+    height: 100%;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom:10px;
+    border-radius: 5px;
+    border-color: black;
+    }
+    .bu{
+    background-color: rgb(39, 37, 37);
+    padding:3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left:10px;
+    margin-right:10px;
+    border-radius: 10px;
+    margin-bottom: 100px;
+    border-color: black;
+    color:rgb(135, 137, 138);
+    }
+
+    </style>
+</head>
+<body>
+    <div>
+        <a href="/" ></a>
+        <form action="/edit" method="post" class="f">
+            <input class="block" type="text" placeholder="previous name " name="prev" value="<%=filename%>">
+            <input class="block" type="text" placeholder="new name " name="new">
+            <input type="submit" value="update name" class="bu">
+        </form>
+    </div>
+</body>
+</html>
