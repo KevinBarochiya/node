@@ -10,7 +10,7 @@ app.use(express.static(path.join(__dirname,'public')));
 
 app.get("/",function(req,res){
     fs.readdir(`./files`,function(err,files){
-        res.render("hello",{files:files});
+        res.render("index",{files:files});
     });   
 });
 app.get('/files/:filename',function(req,res){
@@ -31,6 +31,7 @@ app.post("/edit",function(req,res){
         res.redirect("/");
     });
 });
-app.listen(3000,function(){
-    console.log("running");
+const PORT = process.env.PORT || 3000; // Use the PORT variable or default to 3000
+app.listen(PORT, () => {
+    console.log(`Server running on http://localhost:${PORT}`);
 });
